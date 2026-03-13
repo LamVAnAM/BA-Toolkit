@@ -2,40 +2,40 @@
 
 ## Supported Versions
 
-Muc tieu hien tai la ho tro nhanh cho nhanh `main`. Neu phat hien loi bao mat, vui long bao cao tren ban moi nhat.
+The current support target is the latest `main` branch. If you discover a security issue, please report it against the most recent version of the project.
 
 ## Reporting a Vulnerability
 
-Khong mo issue cong khai cho loi bao mat nhay cam.
+Please do not open a public issue for sensitive security vulnerabilities.
 
-Hay gui thong tin ve:
+Send reports to:
 
 - Brand: `vannamdigital`
 - Email: `namxp2@gmail.com`
 
-Noi dung nen bao gom:
+Please include the following when possible:
 
-- Mo ta loi
-- Buoc tai hien
-- Muc do anh huong
-- Screenshot / log neu co
-- De xuat cach khac phuc neu ban co
+- A clear description of the issue
+- Reproduction steps
+- Expected impact and severity
+- Screenshots or logs if relevant
+- A suggested fix or mitigation, if you have one
 
 ## Response Process
 
-Quy trinh xu ly de xuat:
+Proposed response flow:
 
-1. Xac nhan da nhan bao cao
-2. Tai hien va danh gia muc do anh huong
-3. Phat hanh ban va ban fix
-4. Cong bo sau khi da co bien phap giam thieu hop ly
+1. Acknowledge receipt of the report
+2. Reproduce and assess the impact
+3. Prepare and release a fix
+4. Disclose the issue after a reasonable mitigation is available
 
 ## Scope
 
-Uu tien cao cho cac nhom loi:
+Higher-priority security areas include:
 
 - Authentication / Authorization
-- Data isolation giua user
+- User-level data isolation
 - Secret leakage
 - File upload / file serving
 - CSRF / session hijacking
