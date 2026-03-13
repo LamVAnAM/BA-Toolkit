@@ -1,4 +1,4 @@
-# BA Toolkit
+﻿# BA Toolkit
 
 BA Toolkit is a Business Analysis workspace for requirement intake, process analysis, data design, AI-assisted normalization, and consolidated reporting by department or project.
 
