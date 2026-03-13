@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+          extensions: sqlite3, pdo_sqlite, curl, gd, zip
+          coverage: none
+
+      - name: Validate PHP syntax
+        run: |
+          while IFS= read -r file; do
+            php -l "$file"
+          done < <(find . -path ./vendor -prune -o -name "*.php" -print)
+
+      - name: Validate templates
+        run: php scripts/validate_templates.php

@@ -1,0 +1,16 @@
+{
+  "name": "ERP Integration Hub",
+  "description": "Danh sach ket noi mau giua ERP va cac he thong ve tinh.",
+  "icon": "fa-plug",
+  "version": "1.0.0",
+  "author": "Core Team",
+  "tags": ["integration", "erp"],
+  "payload": {
+    "items": [
+      { "system_name": "ERP Core", "interface_type": "REST API" },
+      { "system_name": "HRM", "interface_type": "SFTP File" },
+      { "system_name": "DMS", "interface_type": "Webhook" },
+      { "system_name": "BI Warehouse", "interface_type": "Database Replication" }
+    ]
+  }
+}

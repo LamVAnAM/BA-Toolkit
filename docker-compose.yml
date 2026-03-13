@@ -1,0 +1,20 @@
+services:
+  ba-toolkit:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ba-toolkit
+    ports:
+      - "8080:80"
+    environment:
+      APP_ENV: production
+      APP_KEY: change_this_to_a_real_secret_key
+      GOOGLE_CLIENT_ID: ""
+      STORAGE_DRIVER: local
+      STORAGE_LOCAL_ROOT: ../private_uploads
+    volumes:
+      - ./database:/var/www/html/database
+      - ./private_uploads:/var/www/html/private_uploads
+      - ./storage:/var/www/html/storage
+      - ./.env:/var/www/html/.env:ro
+    restart: unless-stopped

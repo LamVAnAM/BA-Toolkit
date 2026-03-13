@@ -1,0 +1,30 @@
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+/vendor/
+/node_modules/
+
+# Runtime data
+/database/*.sqlite
+/database/*.sqlite-shm
+/database/*.sqlite-wal
+/private_uploads/*
+!/private_uploads/.gitkeep
+/storage/logs/*
+!/storage/logs/.gitkeep
+/storage/tmp/*
+!/storage/tmp/.gitkeep
+
+# Temporary and test artifacts
+/.tmp_*
+*.log
+*.cache
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

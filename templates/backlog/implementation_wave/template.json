@@ -1,0 +1,16 @@
+{
+  "name": "Implementation Wave Plan",
+  "description": "Backlog mau theo 3 wave trien khai.",
+  "icon": "fa-list-check",
+  "version": "1.0.0",
+  "author": "Core Team",
+  "tags": ["backlog", "tracking"],
+  "payload": {
+    "items": [
+      { "requirement": "Chot pham vi wave 1", "priority": "High", "status": "New" },
+      { "requirement": "Thiet ke quy trinh TO-BE chi tiet", "priority": "High", "status": "Analyze" },
+      { "requirement": "Thong nhat danh muc du lieu master", "priority": "Medium", "status": "Analyze" },
+      { "requirement": "Lap ke hoach UAT va dao tao", "priority": "Medium", "status": "New" }
+    ]
+  }
+}

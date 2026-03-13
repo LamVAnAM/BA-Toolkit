@@ -1,0 +1,17 @@
+{
+  "name": "Procure to Pay",
+  "description": "Chuoi quy trinh mua sam den thanh toan theo AS-IS va TO-BE.",
+  "icon": "fa-project-diagram",
+  "version": "1.0.0",
+  "author": "Core Team",
+  "tags": ["process", "p2p"],
+  "payload": {
+    "items": [
+      { "name": "Request Purchase", "type": "AS-IS", "steps": "User creates request, manager reviews, procurement receives request" },
+      { "name": "Vendor Quotation", "type": "AS-IS", "steps": "Procurement requests quotation, vendors respond, shortlist is created" },
+      { "name": "PO Approval", "type": "AS-IS", "steps": "Purchase order drafted, finance checks budget, approver signs off" },
+      { "name": "Goods Receipt", "type": "TO-BE", "steps": "Warehouse confirms receipt, system auto-matches PO, discrepancies escalated" },
+      { "name": "Invoice Matching", "type": "TO-BE", "steps": "3-way match is executed, exceptions routed, payment batch prepared" }
+    ]
+  }
+}

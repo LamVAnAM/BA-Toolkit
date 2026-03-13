@@ -1,0 +1,20 @@
+{
+    "name": "ba/toolkit",
+    "description": "Enterprise BA Toolkit",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.1",
+        "guzzlehttp/guzzle": "^7.9",
+        "vlucas/phpdotenv": "^5.6",
+        "monolog/monolog": "^3.9",
+        "opis/json-schema": "^2.6",
+        "ezyang/htmlpurifier": "^4.19",
+        "ramsey/uuid": "^4.9",
+        "phpoffice/phpword": "^1.4"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}

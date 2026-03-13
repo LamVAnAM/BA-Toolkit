@@ -1,0 +1,15 @@
+{
+  "name": "Finance Department Starter",
+  "description": "Tao nhanh cac department mau cho khoi tai chinh va ke toan.",
+  "icon": "fa-building",
+  "version": "1.0.0",
+  "author": "Core Team",
+  "tags": ["department", "finance"],
+  "payload": {
+    "departments": [
+      { "name": "Finance", "sponsor": "CFO" },
+      { "name": "Accounting", "sponsor": "Chief Accountant" },
+      { "name": "Treasury", "sponsor": "Finance Manager" }
+    ]
+  }
+}
