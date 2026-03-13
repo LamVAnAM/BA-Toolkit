@@ -1,22 +1,22 @@
 # Contributing
 
-Muc tieu cua repository nay la de cong dong co the bo sung nhanh cac template nghiep vu va cai tien he thong ma khong phai sua sau vao core.
+The goal of this repository is to let contributors add business templates quickly and improve the system without making unnecessary changes to the core codebase.
 
-## Nguyen tac chung
+## General Principles
 
-- Uu tien dong gop theo huong `template-first`
-- Template moi phai doc lap, de review, de rollback
-- Khong nhung logic nghiep vu dac thu vao core neu co the dua vao `templates/`
+- Prefer a `template-first` contribution model
+- New templates should be isolated, easy to review, and easy to roll back
+- Avoid embedding domain-specific business logic into the core when it can live under `templates/`
 
-## Cau truc template
+## Template Structure
 
-Template duoc dat tai:
+Templates are stored at:
 
 ```text
 templates/<module>/<template_key>/template.json
 ```
 
-Module ho tro hien tai:
+Currently supported modules:
 
 - `organization`
 - `process_mapping`
@@ -25,11 +25,11 @@ Module ho tro hien tai:
 - `backlog`
 - `reports`
 
-## Quy trinh them template moi
+## How to Add a New Template
 
-1. Tao thu muc moi trong `templates/<module>/<template_key>/`
-2. Tao file `template.json`
-3. Dat day du metadata:
+1. Create a new directory under `templates/<module>/<template_key>/`
+2. Add a `template.json` file
+3. Include complete metadata:
    - `name`
    - `description`
    - `icon`
@@ -37,12 +37,12 @@ Module ho tro hien tai:
    - `author`
    - `tags`
    - `payload`
-4. Kiem tra template hien len dung trong UI module tuong ung
-5. Cap nhat `templates/README.md` neu template them payload dac thu
+4. Verify that the template renders correctly in the corresponding module UI
+5. Update `templates/README.md` if the template introduces a module-specific payload pattern
 
-## Quy uoc commit
+## Commit Convention
 
-Khuyen nghi dung convention sau:
+Recommended commit message examples:
 
 ```text
 feat(template): add crm_foundation data architecture template
@@ -50,30 +50,30 @@ fix(template): correct procure_to_pay process steps
 docs(template): update contribution guide
 ```
 
-## Pull Request
+## Pull Requests
 
-Khi gui PR:
+When opening a PR:
 
-1. Mo ta ro template dung cho module nao
-2. Neu can, kem screenshot UI sau khi apply template
-3. Neu template mo rong payload moi, mo ta ro thay doi schema
-4. Dam bao khong pha vo template hien co
+1. Clearly describe which module the template is for
+2. Include screenshots if the UI output matters
+3. If the template extends payload structure, explain the schema change clearly
+4. Make sure the change does not break existing templates
 
-## Review checklist
+## Review Checklist
 
-- Template hop le ve JSON
-- Metadata day du
-- Payload dung schema module
-- Ten template ro rang
-- Khong chen secret, du lieu nhay cam, hoac thong tin noi bo
-- Apply template khong lam loi UI/API
+- The template is valid JSON
+- Metadata is complete
+- The payload matches the target module schema
+- The template name is clear and specific
+- No secrets, sensitive data, or internal-only information are included
+- Applying the template does not break UI or API behavior
 
-## Khi nao can sua core
+## When Core Changes Are Appropriate
 
-Chi sua core khi:
+Core code changes are justified only when:
 
-- Them module template moi
-- Them payload schema moi cho module
-- Bo sung renderer/applier dung chung
+- A new template-capable module is introduced
+- A new shared payload schema is required
+- A shared renderer or template applier must be extended
 
-Neu chi them noi dung template, khong can sua `assets/js/app.js` hoac `api/templates.php`.
+If you are only adding template content, you should not need to modify `assets/js/app.js` or `api/templates.php`.
