@@ -16,9 +16,13 @@ If this project is useful for your team or your own work, you can support its ma
 - PayPal: `https://paypal.me/vannamdigital`
 - Contact: `namxp2@gmail.com`
 
-For supporters in Vietnam, you can use the QR code below:
+For supporters in Vietnam, a local QR option is also available:
 
-![Donate QR for Vietnam](https://raw.githubusercontent.com/LamVAnAM/photo/main/2113021916710110173.jpg)
+<details>
+<summary>Show Vietnam QR</summary>
+<br>
+<img src="https://raw.githubusercontent.com/LamVAnAM/photo/main/2113021916710110173.jpg" alt="Donate QR for Vietnam" width="180">
+</details>
 
 ## Core Features
 
